@@ -50,3 +50,18 @@ if (args.Length > 0 && int.TryParse(args[0], out int number))
 
 Factorial facd = new Factorial(5);
 //Console.WriteLine(facd.Calculate());
+
+// *******
+// * EX2 *
+// *******
+
+Temperature temperature = new Temperature() { Celsius = 21 };
+//Console.WriteLine(temperature.Celsius);
+//Console.WriteLine(temperature.Fahrenheit);
+//Console.WriteLine(temperature.Kelvin);
+
+//temperature.Celsius = 23;
+//temperature.Fahrenheit = 75;
+
+(double c, double f, _) = temperature;
+//Console.WriteLine($"{c} °C is {f}°F");
