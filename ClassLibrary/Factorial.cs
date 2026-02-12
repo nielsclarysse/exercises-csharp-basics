@@ -1,23 +1,27 @@
-﻿using System.Numerics;
+﻿namespace ClassLibrary;
 
-namespace ClassLibrary;
-
-public class Factorial
+public class Factorial()
 {
-    private readonly int _number;
+    public int Number { get; set; }
 
-    public Factorial(int number)
+    public Factorial(int number) : this()
     {
-        _number = number;
+        Number = number;
     }
 
-    public BigInteger Calculate()
+    public long Calculate()
     {
-        if (_number < 0) return 0;
+        return Calculate(Number);
+    }
 
-        BigInteger result = 1;
+    public static long Calculate(int number)
+    {
+        if (number < 0) return 0;
+        if (number == 0) return 1;
 
-        for (int i = _number; i > 1; i--)
+        long result = 1;
+
+        for (int i = number; i > 1; i--)
         {
             result *= i;
         }

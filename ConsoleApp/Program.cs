@@ -25,5 +25,28 @@ foreach (int i in Fibonacci(10))
 // * EX1 - A *
 // ***********
 
-Factorial fac = new Factorial(5);
-//Console.WriteLine(fac.Calculate());
+Factorial faca = new Factorial(5);
+//Console.WriteLine(faca.Calculate());
+
+// ***********
+// * EX1 - B *
+// ***********
+
+Factorial facb = new Factorial() { Number = 5 };
+//Console.WriteLine(facb.Calculate());
+
+// ***********
+// * EX1 - C *
+// ***********
+
+if (args.Length > 0 && int.TryParse(args[0], out int number))
+{
+    //Console.WriteLine(Factorial.Calculate(number));
+}
+
+// ***********
+// * EX1 - D *
+// ***********
+
+Factorial facd = new Factorial(5);
+//Console.WriteLine(facd.Calculate());
