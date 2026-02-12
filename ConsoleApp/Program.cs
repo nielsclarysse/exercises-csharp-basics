@@ -65,3 +65,27 @@ Temperature temperature = new Temperature() { Celsius = 21 };
 
 (double c, double f, _) = temperature;
 //Console.WriteLine($"{c} °C is {f}°F");
+
+// *********
+// * EX3-4 *
+// *********
+
+Lecturer profJones = new Lecturer("Indiana", "Jones", "EMP001");
+Lecturer profSnape = new Lecturer("Severus", "Snape", "EMP002");
+
+Student s1 = new Student("Alice", "Wonder", "S101", "AI");
+Student s2 = new Student("Bob", "Builder", "S102", "Cloud");
+Student s3 = new Student("Charlie", "Brown", "S103", "AI");
+
+Group groupA = new Group("Advanced Robotics", profJones);
+groupA.Students.Add(s1);
+groupA.Students.Add(s2);
+
+Group groupB = new Group("Potions & Ethics", profSnape);
+groupB.Students.Add(s3);
+
+Institute myUni = new Institute("Tech University");
+myUni.Groups.Add(groupA);
+myUni.Groups.Add(groupB);
+
+//myUni.ShowInfo();
