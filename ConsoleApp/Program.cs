@@ -89,3 +89,25 @@ myUni.Groups.Add(groupA);
 myUni.Groups.Add(groupB);
 
 //myUni.ShowInfo();
+
+// *******
+// * EX5 *
+// *******
+
+Dictionary<string, int> counts = new();
+
+while (true)
+{
+    string input = Console.ReadLine() ?? "";
+    if (input.ToUpper() == "STOP") break;
+
+    foreach (string word in input.ToUpper().Split(' '))
+    {
+        counts[word] = counts.GetValueOrDefault(word) + 1;
+    }
+}
+
+foreach (var (word, count) in counts)
+{
+    Console.WriteLine($"{word}: {count}");
+}
