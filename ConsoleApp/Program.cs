@@ -1,4 +1,6 @@
-﻿// *****************
+﻿using ClassLibrary;
+
+// *****************
 // * EX0 - Warm Up *
 // *****************
 
@@ -16,5 +18,12 @@ IEnumerable<int> Fibonacci(int length)
 
 foreach (int i in Fibonacci(10))
 {
-    Console.WriteLine(i);
+    //Console.WriteLine(i);
 }
+
+// ***********
+// * EX1 - A *
+// ***********
+
+Factorial fac = new Factorial(5);
+//Console.WriteLine(fac.Calculate());
